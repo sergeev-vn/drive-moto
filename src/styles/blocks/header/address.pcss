@@ -1,0 +1,14 @@
+.address {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: svg-load('../../images/icons/location.svg');
+    width: 30px;
+    height: 30px;
+    right: 102%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

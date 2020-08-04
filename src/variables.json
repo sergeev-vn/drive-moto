@@ -1,0 +1,8 @@
+{
+  "main": "#2F3035",
+  "secondary": "#FFFFFF",
+  "gray": "#F0F0F4",
+  "blue": "#1C62CD",
+
+  "speed": ".3s"
+}

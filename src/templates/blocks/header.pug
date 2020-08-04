@@ -1,0 +1,46 @@
+header.header
+  .header__top
+    .container 
+      .header__top-inner
+        nav.menu
+          ul.menu__list
+            li.menu__item
+              a(href="#").menu__link Магазины
+            li.menu__item
+              a(href="#").menu__link Акции
+            li.menu__item
+              a(href="#").menu__link Доставка и оплата
+        .header__logo
+          a(href="#").logo
+            +icon('logo', 'logo__icon')
+        .header__top-item
+          .header__address
+            address.address Москва,  ул. Науки  25
+          ul.user-list
+            li.user-list__item
+              a(href="#").user-list__link.user-list__link_heart
+                +icon('heart', 'user-list__icon')
+            li.user-list__item
+              a(href="#").user-list__link.user-list__link_person
+                +icon('person', 'user-list__icon')
+            li.user-list__item
+              a(href="#").user-list__link.user-list__link_cart
+                +icon('cart', 'user-list__icon')
+                .cart__num 1
+  .header__bottom
+    .container
+      ul.menu-categories
+        li.menu-categories__item
+          a(href="#" title="Квадроциклы").menu-categories__link Квадроциклы
+        li.menu-categories__item
+          a(href="#" title="Катера").menu-categories__link Катера
+        li.menu-categories__item
+          a(href="#" title="Гидроциклы").menu-categories__link Гидроциклы
+        li.menu-categories__item
+          a(href="#" title="Лодки").menu-categories__link Лодки
+        li.menu-categories__item
+          a(href="#" title="Снегоходы").menu-categories__link Снегоходы
+        li.menu-categories__item
+          a(href="#" title="Двигатели").menu-categories__link Двигатели
+        li.menu-categories__item
+          a(href="#" title="Запчасти").menu-categories__link Запчасти

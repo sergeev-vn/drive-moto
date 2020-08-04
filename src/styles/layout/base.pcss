@@ -6,23 +6,24 @@ html {
   @include desktop {
     font-size: 16px;
   }
+
   @include tablets {
     font-size: 14px;
   }
 }
+
 body,
 html {
   height: 100%;
 }
 
 body {
-  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
-  font-size: 24px;
-  line-height: 28px;
+  font-family: 'SF Pro Display', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $main;
-  background-color: $secondary;
 }
 
 .wrapper {
@@ -32,8 +33,8 @@ body {
 }
 
 .container {
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
   width: 90%;
 
   @include phones {
@@ -68,6 +69,10 @@ h6 {
 p {
   margin: 0;
   padding: 0;
+}
+
+address {
+  font-style: normal;
 }
 
 button[type="button"] {
