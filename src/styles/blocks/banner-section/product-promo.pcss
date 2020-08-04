@@ -1,0 +1,86 @@
+.product-promo {
+  display: block;
+  max-width: 265px;
+  text-align: center;
+  border: 1px solid $dark-gray;
+  border-radius: 3px;
+}
+
+.product-promo__header-row {
+  display: flex;
+  justify-content: space-between;
+
+  &_align-right {
+    justify-content: flex-end;
+  }
+}
+
+.product-promo__sticker {
+  padding: 8px 20px;
+  background-color: $blue;
+  text-transform: uppercase;
+  color: $secondary;
+  font-family: 'Proxima Nova';
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: bold;
+}
+
+.product-promo__price-new {
+  font-family: Barlow;
+  font-weight: bold;
+  color: $blue;
+  font-size: 27px;
+  line-height: 32px;
+  margin-right: 8px;
+  margin-top: 3px;
+}
+
+.product-promo__price-old {
+  font-family: Barlow;
+  font-size: 14px;
+  line-height: 17px;
+  color: $light-gray;
+  margin-right: 4px;
+  position: relative;
+  margin-top: 7px;
+
+  &::after {
+    content: '';
+    width: 55px;
+    height: 1px;
+    background-color: $light-gray;
+    position: absolute;
+    top: 9px;
+    left: -3px;
+    transform: rotate(-15deg);
+  }
+}
+
+.product-promo__body {
+  margin: 7px 20px;
+}
+
+.product-promo__image {
+  margin-bottom: 5px;
+}
+
+.product-promo__img {
+  margin: 0 auto;
+}
+
+.product-promo__title {
+  font-weight: bold;
+}
+
+.product-promo__footer {
+  background-color: $gray;
+  padding: 25px 20px;
+}
+
+.product-promo__deadline-date {
+  color: $blue;
+  font-family: Barlow;
+  font-weight: bold;
+}

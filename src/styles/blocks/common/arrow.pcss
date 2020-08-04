@@ -1,0 +1,22 @@
+.arrow {
+  width: 26px;
+  height: 38px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px;
+  fill: $secondary;
+
+  &.arrow_prev {
+    left: 15px;
+    z-index: 1;
+    
+    .arrow-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.arrow_next {
+    right: 15px;
+  }
+}
