@@ -5,3 +5,6 @@ if (process.env.NODE_ENV === "development") {
 }
 
 import "slick-carousel";
+
+function requireAll(r) { r.keys().forEach(r); }
+requireAll(require.context('./scripts/', true, /\.js$/));
