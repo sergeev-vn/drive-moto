@@ -2,32 +2,37 @@ section.banner-section
   .container
     .banner-section__inner
       .banner-section__slider
-        ul.main-slider
-          li.main-slider__item
-            a(href="#").main-slider__item__link
-              +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
-          li.main-slider__item
-            a(href="#").main-slider__item__link
-              +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
-          li.main-slider__item
-            a(href="#").main-slider__item__link
-              +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
-          li.main-slider__item
-            a(href="#").main-slider__item__link
-              +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
-          li.main-slider__item
-            a(href="#").main-slider__item__link
-              +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
-          li.main-slider__item
-            a(href="#").main-slider__item__link
-              +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
+        .banner-section__slider-inner
+          button(type="button").arrow.arrow_prev
+            +icon('arrow', 'arrow-icon')
+          ul.main-slider
+            li.main-slider__item
+              a(href="#").main-slider__item__link
+                +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
+            li.main-slider__item
+              a(href="#").main-slider__item__link
+                +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
+            li.main-slider__item
+              a(href="#").main-slider__item__link
+                +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
+            li.main-slider__item
+              a(href="#").main-slider__item__link
+                +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
+            li.main-slider__item
+              a(href="#").main-slider__item__link
+                +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
+            li.main-slider__item
+              a(href="#").main-slider__item__link
+                +image('content/main-slider/main-slider-1.jpg', 'main-slider__img')
+          button(type="button").arrow.arrow_next
+            +icon('arrow', 'arrow-icon')
       .banner-section__item
         a(href="#").product-promo
           .product-promo__header
             .product-promo__header-row
               span.product-promo__sticker Акция
               span.product-promo__price-new 190 000 ₽
-            .product-promo__header-row
+            .product-promo__header-row.product-promo__header-row_align-right
               span.product-promo__price-old 225 000 ₽
           .product-promo__body
             .product-promo__image
