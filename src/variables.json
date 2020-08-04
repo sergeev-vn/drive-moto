@@ -2,6 +2,8 @@
   "main": "#2F3035",
   "secondary": "#FFFFFF",
   "gray": "#F0F0F4",
+  "dark-gray": "#CDCDCD",
+  "light-gray": "#C4C4C4",
   "blue": "#1C62CD",
 
   "speed": ".3s"
