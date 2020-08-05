@@ -4,6 +4,7 @@
   "gray": "#F0F0F4",
   "dark-gray": "#CDCDCD",
   "light-gray": "#C4C4C4",
+  "darker-gray": "#656464",
   "blue": "#1C62CD",
 
   "speed": ".3s"
