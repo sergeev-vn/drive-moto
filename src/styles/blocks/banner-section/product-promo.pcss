@@ -1,9 +1,13 @@
 .product-promo {
   display: block;
   max-width: 265px;
+  min-width: 240px;
   text-align: center;
   border: 1px solid $dark-gray;
   border-radius: 3px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-promo__header-row {
@@ -48,18 +52,19 @@
 
   &::after {
     content: '';
-    width: 55px;
+    width: 90%;
     height: 1px;
     background-color: $light-gray;
     position: absolute;
     top: 9px;
     left: -3px;
-    transform: rotate(-15deg);
+    transform: rotate(-17deg);
   }
 }
 
 .product-promo__body {
   margin: 7px 20px;
+  flex: 1;
 }
 
 .product-promo__image {

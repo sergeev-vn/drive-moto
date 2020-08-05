@@ -1,6 +1,10 @@
 .main-slider {
   max-width: 870px;
 
+  .slick-slide div {
+    max-height: 400px;
+  }
+
   .slick-dots {
     position: absolute;
     bottom: 40px;
@@ -35,4 +39,19 @@
       }
     }
   }
+}
+
+.main-slider__item {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.main-slider__img {
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.main-slider__item__link {
+  display: block;
 }
