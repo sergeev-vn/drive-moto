@@ -1,0 +1,30 @@
+section.popular-products
+  .container
+    .popular-products__inner
+      .products-tabs
+        ul.products-tabs__tabs
+          li.products-tabs__tabs-item
+            a(href="#tab-1").products-tabs__tabs-link Поиск по номеру
+          li.products-tabs__tabs-item.products-tabs__tabs-item_active
+            a(href="#tab-2").products-tabs__tabs-link Поиск по марке
+          li.products-tabs__tabs-item
+            a(href="#tab-3").products-tabs__tabs-link Поиск по названию товара
+        ul.products-tabs__content
+          li(id="tab-1").products-tabs__content-item
+            form.search-form
+              .search-form__input
+                input(type="search", name="search-form-brand" placeholder="Введите номер").search-input
+              .search-form__btn
+                button(type="submit").button-basic Искать
+          li(id="tab-2").products-tabs__content-item.products-tabs__content-item_active
+            form.search-form
+              .search-form__input
+                input(type="search", name="search-form-brand" placeholder="Введите марку").search-input
+              .search-form__btn
+                button(type="submit").button-basic Искать
+          li(id="tab-3").products-tabs__content-item
+            form.search-form
+              .search-form__input
+                input(type="search", name="search-form-brand" placeholder="Введите название товара").search-input
+              .search-form__btn
+                button(type="submit").button-basic Искать
