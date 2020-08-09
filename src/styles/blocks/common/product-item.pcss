@@ -1,0 +1,136 @@
+.product-item {
+  border: 1px solid $dark-gray;
+  border-radius: 3px;
+  max-width: 270px;
+  min-width: 213px;
+  min-height: 403px;
+  padding: 52px 35px 31px;
+  transition: $speed;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    border-color: transparent;
+
+    .product-item__title,
+    .product-item__price {
+      color: $blue;
+    }
+
+    .product-item__hover-text {
+      opacity: 1;
+    }
+  }
+
+  &_sale {
+    &::before {
+      content: 'SALE';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $blue;
+      padding: 8px 15px;
+      text-transform: uppercase;
+      color: $secondary;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &_not-available {
+    .product-item__price {
+      display: none;
+    }
+
+    .product-item__notify-text {
+      display: block;
+    }
+
+    .product-item__button_bottom {
+      display: none;
+    }
+
+    .product-item__inner-link {
+      display: block;
+    }
+  }
+}
+
+.product-item__image {
+  position: relative;
+}
+
+.product-item__img {
+  margin: 0 auto;
+}
+
+.product-item__hover-text {
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  white-space: nowrap;
+  font-size: 20px;
+  line-height: 24px;
+  background: rgba($secondary, 0.9);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 18px 21px;
+  cursor: pointer;
+}
+
+.product-item__title {
+  margin-top: 14px;
+  transition: $speed;
+}
+
+.product-item__price {
+  font-family: Barlow;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 25px;
+  transition: $speed;
+}
+
+.product-item__notify-text {
+  display: none;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.product-item__inner-link {
+  display: none;
+}
+
+.product-item__notify-link {
+  display: inline-block;
+  color: $blue;
+  font-size: 16px;
+  border-bottom: 1px solid $blue;
+  margin-top: 21px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.product-item__button {
+  position: absolute;
+  z-index: 5;
+
+  &_top {
+    top: 16px;
+    right: 18px;
+  }
+
+  &_bottom {
+    bottom: 0;
+    right: 0;
+  }
+}

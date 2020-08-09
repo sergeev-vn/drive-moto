@@ -1,13 +1,17 @@
-.search-tabs__tabs {
-  display: flex;
-  margin-bottom: 25px;
-}
-
-.search-tabs__tabs-item_active {
-  .search-tabs__tabs-link {
+.search-tabs {
+  .tabs__tablist-item_active {
     background: $gray;
     border-radius: 5px;
   }
+
+  .tabs__content-item_active {
+    display: block;
+  }
+}
+
+.search-tabs__tabs {
+  display: flex;
+  margin-bottom: 25px;
 }
 
 .search-tabs__tabs-link {
@@ -19,8 +23,4 @@
 
 .search-tabs__content-item {
   display: none;
-
-  &_active {
-    display: block;
-  }
 }

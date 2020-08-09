@@ -1,9 +1,13 @@
-$('.search-tabs__tabs-link').on('click', function(e) {
+$('.tabs__tablist-link').on('click', function(e) {
   e.preventDefault();
-  $('.search-tabs__tabs-item').removeClass('search-tabs__tabs-item_active');
-  $('.search-tabs__content-item').removeClass('search-tabs__content-item_active');
-  $(this).parent('li').addClass('search-tabs__tabs-item_active');
-  $($(this).attr('href')).addClass('search-tabs__content-item_active');
+
+  $(this).closest('.tabs').find('.tabs__tablist-item').removeClass('tabs__tablist-item_active');
+  $(this).closest('.tabs').find('.tabs__content-item').removeClass('tabs__content-item_active');
+
+  $(this).parent('li').addClass('tabs__tablist-item_active');
+  $($(this).attr('href')).addClass('tabs__content-item_active');
+
+  $('.products-slider__list').slick('setPosition');
 })
 
 

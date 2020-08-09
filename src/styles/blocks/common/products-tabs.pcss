@@ -1,0 +1,38 @@
+.products-tabs {
+  margin-bottom: 36px;
+}
+
+.products-tabs__tabs {
+  margin-bottom: 25px;
+}
+
+.products-tabs__tabs-link {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.products-tabs__tabs-item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.tabs__tablist-item_active {
+  .products-tabs__tabs-link {
+    font-weight: 500;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 85%;
+      height: 2px;
+      background-color: $blue;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

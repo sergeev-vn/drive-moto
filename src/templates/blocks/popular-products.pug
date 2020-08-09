@@ -1,30 +1,96 @@
 section.popular-products
   .container
     .popular-products__inner
-      .products-tabs
-        ul.products-tabs__tabs
-          li.products-tabs__tabs-item
-            a(href="#tab-1").products-tabs__tabs-link Поиск по номеру
-          li.products-tabs__tabs-item.products-tabs__tabs-item_active
-            a(href="#tab-2").products-tabs__tabs-link Поиск по марке
-          li.products-tabs__tabs-item
-            a(href="#tab-3").products-tabs__tabs-link Поиск по названию товара
-        ul.products-tabs__content
-          li(id="tab-1").products-tabs__content-item
-            form.search-form
-              .search-form__input
-                input(type="search", name="search-form-brand" placeholder="Введите номер").search-input
-              .search-form__btn
-                button(type="submit").button-basic Искать
-          li(id="tab-2").products-tabs__content-item.products-tabs__content-item_active
-            form.search-form
-              .search-form__input
-                input(type="search", name="search-form-brand" placeholder="Введите марку").search-input
-              .search-form__btn
-                button(type="submit").button-basic Искать
-          li(id="tab-3").products-tabs__content-item
-            form.search-form
-              .search-form__input
-                input(type="search", name="search-form-brand" placeholder="Введите название товара").search-input
-              .search-form__btn
-                button(type="submit").button-basic Искать
+      .popular-products__title
+        h2.title Популярные товары
+      .tabs.products-tabs
+        ul.tabs__tablist.products-tabs__tabs
+          li.tabs__tablist-item.products-tabs__tabs-item.tabs__tablist-item_active
+            a(href="#popular-spares").tabs__tablist-link.products-tabs__tabs-link запчасти
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#popular-motors").tabs__tablist-link.products-tabs__tabs-link моторы
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#popular-tires").tabs__tablist-link.products-tabs__tabs-link шины 
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#popular-electronics").tabs__tablist-link.products-tabs__tabs-link электроника
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#popular-tools").tabs__tablist-link.products-tabs__tabs-link инструменты
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#popular-accessories").tabs__tablist-link.products-tabs__tabs-link аксессуары 
+        ul.tabs__content.products-tabs__content
+          li(id="popular-spares").tabs__content-item.products-tabs__content-item.tabs__content-item_active
+            .products-slider
+              button(type="button").arrow.arrow_prev
+                +icon('arrow', 'arrow-icon')
+              ul.products-slider__list
+                - var popularProductList = [
+                -  { title: 'Водонепроницаемый Рюкзак', price: '9 800', img: 'backpack.png'},
+                -  { title: "Спасательный жилет BRP Men's Airflow PFD", price: '6 900', img: 'life-vest.png', sale: true},
+                -  { title: "BRP Audio-Premium System", price: '68 000', img: 'audio-system.png'},
+                -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+                -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+                -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+                - ]
+                each product in popularProductList
+                  li.products-slider__item
+                    a(href="#" class={'product-item_sale': product.sale === true, 'product-item_not-available': product.notAvailable === true}).product-item
+                      .product-item__button.product-item__button_top
+                        button(type="button").button-favorite
+                          .button-favorite__icon
+                      .product-item__image
+                        .product-item__hover-text посмотреть товар
+                        +image(`content/products/${product.img}`, 'product-item__img')
+                      h4.product-item__title #{product.title}
+                      .product-item__price #{product.price} ₽
+                      .product-item__notify-text нет в наличии
+                      object(type="owo/uwu").product-item__inner-link
+                        a(href="#").product-item__notify-link Сообщить о поступлении
+                      .product-item__button.product-item__button_bottom
+                        button(type="button").button-cart
+                          +icon('cart', 'button-cart__icon')
+              button(type="button").arrow.arrow_next
+                +icon('arrow', 'arrow-icon')
+          li(id="popular-motors").tabs__content-item.products-tabs__content-item
+            .products-slider
+              button(type="button").arrow.arrow_prev
+                +icon('arrow', 'arrow-icon')
+              ul.products-slider__list
+                - var popularProductList2 = [
+                -  { title: 'Водонепроницаемый Рюкзак', price: '9 800', img: 'backpack.png'},
+                -  { title: "Спасательный жилет BRP Men's Airflow PFD", price: '6 900', img: 'life-vest.png', sale: true},
+                -  { title: "BRP Audio-Premium System", price: '68 000', img: 'audio-system.png'},
+                -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+                -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+                -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+                - ]
+                each product2 in popularProductList2
+                  li.products-slider__item
+                    a(href="#" class={'product-item_sale': product2.sale === true, 'product-item_not-available': product2.notAvailable === true}).product-item
+                      .product-item__button.product-item__button_top
+                        button(type="button").button-favorite
+                          .button-favorite__icon
+                      .product-item__image
+                        .product-item__hover-text посмотреть товар
+                        +image(`content/products/${product2.img}`, 'product-item__img')
+                      h4.product-item__title #{product2.title}
+                      .product-item__price #{product2.price} ₽
+                      .product-item__notify-text нет в наличии
+                      object(type="owo/uwu").product-item__inner-link
+                        a(href="#").product-item__notify-link Сообщить о поступлении
+                      .product-item__button.product-item__button_bottom
+                        button(type="button").button-cart
+                          +icon('cart', 'button-cart__icon')
+              button(type="button").arrow.arrow_next
+                +icon('arrow', 'arrow-icon')
+          li(id="popular-tires").tabs__content-item.products-tabs__content-item
+            | slider 3
+          li(id="popular-motors").tabs__content-item.products-tabs__content-item
+            | slider 4
+          li(id="popular-electronics").tabs__content-item.products-tabs__content-item
+            | slider 5
+          li(id="popular-tools").tabs__content-item.products-tabs__content-item
+            | slider 6
+          li(id="popular-accessories").tabs__content-item.products-tabs__content-item
+            | slider 7
+    .popular-products__button
+      a(href="#").button-rectangle Показать еще
