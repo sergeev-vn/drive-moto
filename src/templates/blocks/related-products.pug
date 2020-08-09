@@ -1,0 +1,64 @@
+section.related-products
+  .container
+    .related-products__inner
+      .related-products__title
+        h2.title С этим товаром покупают
+      .tabs.products-tabs
+        ul.tabs__tablist.products-tabs__tabs
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#related-spares").tabs__tablist-link.products-tabs__tabs-link запчасти
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#related-motors").tabs__tablist-link.products-tabs__tabs-link моторы
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#related-tires").tabs__tablist-link.products-tabs__tabs-link шины 
+          li.tabs__tablist-item.products-tabs__tabs-item.tabs__tablist-item_active
+            a(href="#related-electronics").tabs__tablist-link.products-tabs__tabs-link электроника
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#related-tools").tabs__tablist-link.products-tabs__tabs-link инструменты
+          li.tabs__tablist-item.products-tabs__tabs-item
+            a(href="#related-accessories").tabs__tablist-link.products-tabs__tabs-link аксессуары 
+        ul.tabs__content.products-tabs__content
+          li(id="related-spares").tabs__content-item.products-tabs__content-item
+            | slider 1
+          li(id="related-motors").tabs__content-item.products-tabs__content-item
+            | slider 2
+          li(id="related-tires").tabs__content-item.products-tabs__content-item
+            | slider 3
+          li(id="related-motors").tabs__content-item.products-tabs__content-item
+            | slider 4
+          li(id="related-electronics").tabs__content-item.products-tabs__content-item.tabs__content-item_active
+            .products-slider
+              button(type="button").arrow.arrow_prev
+                +icon('arrow', 'arrow-icon')
+              ul.products-slider__list
+                - var popularProductList2 = [
+                -  { title: 'BRP Audio-портативная система', price: '9 800', img: 'brp-audio-system.png', sale: true, notAvailable: true},
+                -  { title: "Garmin Echomap Plus 62cv", price: '45 800', img: 'echomap.png'},
+                -  { title: "RF D.E.S.S.TM Key", price: '68 000', img: 'rf-key.png', sale: true, notAvailable: true},
+                -  { title: "Мужской костюм 3мм", price: '7 000', img: 'suit.png'},
+                -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+                -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+                - ]
+                each product2 in popularProductList2
+                  li.products-slider__item
+                    a(href="#" class={'product-item_sale': product2.sale === true, 'product-item_not-available': product2.notAvailable === true}).product-item
+                      .product-item__button.product-item__button_top
+                        button(type="button").button-favorite
+                          .button-favorite__icon
+                      .product-item__image
+                        .product-item__hover-text посмотреть товар
+                        +image(`content/products/${product2.img}`, 'product-item__img')
+                      h4.product-item__title #{product2.title}
+                      .product-item__price #{product2.price} ₽
+                      .product-item__notify-text нет в наличии
+                      object(type="owo/uwu").product-item__inner-link
+                        a(href="#").product-item__notify-link Сообщить о поступлении
+                      .product-item__button.product-item__button_bottom
+                        button(type="button").button-cart
+                          +icon('cart', 'button-cart__icon')
+              button(type="button").arrow.arrow_next
+                +icon('arrow', 'arrow-icon')
+          li(id="related-tools").tabs__content-item.products-tabs__content-item
+            | slider 6
+          li(id="related-accessories").tabs__content-item.products-tabs__content-item
+            | slider 7
