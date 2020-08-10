@@ -1,4 +1,40 @@
 footer.footer
   .container
-    .footer__top
+    ul.footer__top
+      li.footer__top-item
+        h5.footer__top-title Подпишитесь на нашу рассылку и узнавайте о акция быстрее
+        .footer__subscription
+          form.subscription-form
+            .search-form__input
+              input(type="email", name="search-form-brand" placeholder="Введите номер").search-input
+            .search-form__btn
+              button(type="submit").button-basic Отправить
+      li.footer__top-item
+        h5.footer__top-title Информация
+        nav.footer__nav
+          ul.footer__nav__list
+            li.footer__nav-item
+              a(href="#").footer__nav-link О компании
+            li.footer__nav-item
+              a(href="#").footer__nav-link Контакты
+            li.footer__nav-item
+              a(href="#").footer__nav-link Акции
+            li.footer__nav-item
+              a(href="#").footer__nav-link Магазины
+      li.footer__top-item
+        h5.footer__top-title Интернет-магазин
+      li.footer__top-item
+        .social
+          li.social__item
+            a(href="#").social__link
+              +icon('insta', 'social__icon')
+          li.social__item
+            a(href="#").social__link
+              +icon('vk', 'social__icon')
+          li.social__item
+            a(href="#").social__link
+              +icon('fb', 'social__icon')
+          li.social__item
+            a(href="#").social__link
+              +icon('youtube', 'social__icon')
     .footer__bottom
