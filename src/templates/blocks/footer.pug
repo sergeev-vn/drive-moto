@@ -2,17 +2,17 @@ footer.footer
   .container
     ul.footer__top
       li.footer__top-item
-        h5.footer__top-title Подпишитесь на нашу рассылку и узнавайте о акция быстрее
+        h5.footer__top-title.footer__top-title_display Подпишитесь на нашу рассылку и узнавайте о акция быстрее
         .footer__subscription
           form.subscription-form
             .search-form__input
-              input(type="email", name="search-form-brand" placeholder="Введите номер").search-input
+              input(type="email", name="search-form-brand" placeholder="Введите ваш e-mail:").search-input
             .search-form__btn
               button(type="submit").button-basic Отправить
       li.footer__top-item
         h5.footer__top-title Информация
         nav.footer__nav
-          ul.footer__nav__list
+          ul.footer__nav-list
             li.footer__nav-item
               a(href="#").footer__nav-link О компании
             li.footer__nav-item
@@ -23,8 +23,20 @@ footer.footer
               a(href="#").footer__nav-link Магазины
       li.footer__top-item
         h5.footer__top-title Интернет-магазин
+        nav.footer__nav
+          ul.footer__nav-list
+            li.footer__nav-item
+              a(href="#").footer__nav-link Интернет-магазин
+            li.footer__nav-item
+              a(href="#").footer__nav-link Доставка и самовывоз
+            li.footer__nav-item
+              a(href="#").footer__nav-link Оплата
+            li.footer__nav-item
+              a(href="#").footer__nav-link Возврат-обмен
+            li.footer__nav-item
+              a(href="#").footer__nav-link Новости
       li.footer__top-item
-        .social
+        ul.social
           li.social__item
             a(href="#").social__link
               +icon('insta', 'social__icon')
@@ -38,3 +50,8 @@ footer.footer
             a(href="#").social__link
               +icon('youtube', 'social__icon')
     .footer__bottom
+      ul.footer__bottom-list
+        li.footer__bottom-item
+          a(href="#").footer__bottom-link Договор оферты
+        li.footer__bottom-item
+          a(href="#").footer__bottom-link Политика обработки персональных данных
