@@ -3,13 +3,17 @@
   border-radius: 3px;
   max-width: 270px;
   min-width: 213px;
-  min-height: 403px;
+  min-height: 420px;
   padding: 52px 35px 31px;
   transition: $speed;
   text-align: center;
   position: relative;
   overflow: hidden;
-
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
   &:hover {
     box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
     border-color: transparent;
@@ -114,6 +118,7 @@
   font-size: 16px;
   border-bottom: 1px solid $blue;
   margin-top: 21px;
+  white-space: nowrap;
 
   &:hover {
     opacity: 0.8;
