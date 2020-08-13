@@ -67,7 +67,8 @@ module.exports = (env, argv) => {
 
   const config = {
     entry: {
-      main: "./src/main.js"
+      main: "./src/main.js",
+      catalog: "./src/main.js"
     },
     output: {
       path: path.resolve(__dirname, "./dist"),
@@ -86,7 +87,12 @@ module.exports = (env, argv) => {
     },
     devServer: {
       noInfo: false,
-      overlay: true
+      overlay: true,
+      historyApiFallback: {
+        rewrites: [
+          { from: /^\/catalog/, to: '/catalog.html' },
+        ]
+      }
     },
     performance: {
       hints: false
@@ -96,11 +102,16 @@ module.exports = (env, argv) => {
         template: "src/index.pug",
         chunks: ["main"]
       }),
+      new HtmlWebpackPlugin({
+        filename: "catalog.html",
+        template: "src/pages/catalog.pug",
+        chunks: ["catalog"]
+      }),
       new SpriteLoaderPlugin({ plainSprite: true }),
       new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery"
-    })
+      })
     ],
     devtool: "#eval-source-map"
   };
