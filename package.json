@@ -5,7 +5,7 @@
   "license": "",
   "author": "Sergeev Vladimir",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --hot",
+    "dev": "webpack-dev-server --mode=development --open --hot",
     "build": "rm -rf dist && webpack --mode=production --progress"
   },
   "devDependencies": {
