@@ -1,0 +1,53 @@
+section.catalog-section
+  .container
+    .catalog-section__title
+      h2.title Гидроциклы
+    .catalog-section__sorting
+      .catalog-section__sorting-item
+        ul.sorting-buttons
+          li.sorting-buttons__item
+            button(type="button").sorting-buttons__btn Полноприводные
+          li.sorting-buttons__item
+            button(type="button").sorting-buttons__btn от 5000
+          li.sorting-buttons__item
+            button(type="button").sorting-buttons__btn BRP
+          li.sorting-buttons__item
+            button(type="button").sorting-buttons__btn еще
+      .catalog-section__sorting-item 
+        select(name="").sorting-order
+          option(value="") По популярности
+          option(value="") По популярности
+          option(value="") По популярности
+          option(value="") По популярности
+        .mode-view
+          .mode-view__item
+            button(type="button").mode-view__btn
+              +icon('grid-filter', 'mode-view__icon')
+          .mode-view__item
+            button(type="button").mode-view__btn
+              +icon('list-filter', 'mode-view__icon')
+    .catalog-section__inner
+      aside.catalog-section__inner-aside
+      .catalog-section__inner-content
+        - var popularProductList = [
+        -  { title: "BRP Audio-Premium System", price: '68 000', img: 'audio-system.png'},
+        -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+        -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+        -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
+        - ]
+        each product in popularProductList
+          a(href="#" class={'product-item_sale': product.sale === true, 'product-item_not-available': product.notAvailable === true}).product-item
+            .product-item__button.product-item__button_top
+              button(type="button").button-favorite
+                .button-favorite__icon
+            .product-item__image
+              .product-item__hover-text посмотреть товар
+              +image(`content/products/${product.img}`, 'product-item__img')
+            h4.product-item__title #{product.title}
+            .product-item__price #{product.price} ₽
+            .product-item__notify-text нет в наличии
+            object(type="owo/uwu").product-item__inner-link
+              a(href="#").product-item__notify-link Сообщить о поступлении
+            .product-item__button.product-item__button_bottom
+              button(type="button").button-cart
+                +icon('cart', 'button-cart__icon')

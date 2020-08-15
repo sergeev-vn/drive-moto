@@ -17,6 +17,12 @@
   }
 
   &:last-child {
+    cursor: text;
+
+    .breadcrumbs__link {
+      pointer-events: none;
+    }
+
     &::after {
       content: none;
     }
