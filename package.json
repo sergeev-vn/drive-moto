@@ -44,10 +44,15 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "accounting": "^0.4.1",
     "animate.css": "^4.1.0",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.4.1",
+    "jquery-form-styler": "^2.0.2",
     "normalize.css": "^8.0.1",
+    "numeral": "^2.0.6",
     "pug": "^2.0.3",
+    "rateyo": "^3.0.0-alpha.2",
     "slick-carousel": "^1.8.1"
   }
 }

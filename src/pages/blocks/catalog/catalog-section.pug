@@ -1,7 +1,7 @@
 section.catalog-section
   .container
     .catalog-section__title
-      h2.title Гидроциклы
+      h2.title.title_size Гидроциклы
     .catalog-section__sorting
       .catalog-section__sorting-item
         ul.sorting-buttons
@@ -13,41 +13,127 @@ section.catalog-section
             button(type="button").sorting-buttons__btn BRP
           li.sorting-buttons__item
             button(type="button").sorting-buttons__btn еще
-      .catalog-section__sorting-item 
-        select(name="").sorting-order
-          option(value="") По популярности
-          option(value="") По популярности
-          option(value="") По популярности
-          option(value="") По популярности
+      .catalog-section__sorting-item
+        .catalog-section__sorting-item-sorting-order
+          select(name="").sorting-order
+            option(value="") По популярности
+            option(value="") По популярности
+            option(value="") По популярности
+            option(value="") По популярности
         .mode-view
           .mode-view__item
-            button(type="button").mode-view__btn
-              +icon('grid-filter', 'mode-view__icon')
+            button(type="button").mode-view__btn.mode-view__btn_active
+              +icon('grid-filter', 'mode-view__icon mode-view__icon-grid')
           .mode-view__item
             button(type="button").mode-view__btn
-              +icon('list-filter', 'mode-view__icon')
+              +icon('list-filter', 'mode-view__icon mode-view__icon-list')
     .catalog-section__inner
       aside.catalog-section__inner-aside
+        .tabs.filter-tabs
+          ul.tabs__tablist.filter-tabs__tabs
+            li.tabs__tablist-item.filter-tabs__tabs-item.tabs__tablist-item_active
+              a(href="#filter-parameters" title="Параметры").tabs__tablist-link.filter-tabs__tabs-link Параметры
+            li.tabs__tablist-item.filter-tabs__tabs-item
+              a(href="#filter-brand" title="По марке").tabs__tablist-link.filter-tabs__tabs-link По марке
+          ul.tabs__content.filter-tabs__content
+            li(id="filter-parameters").tabs__content-item.filter-tabs__content-item.tabs__content-item_active
+              form.filter-form
+                ul.filter-form__list
+                  li.filter-form__item
+                    .filter-dropdown
+                      .filter-dropdown__title
+                        h6.title-filter Наличие
+                      .filter-dropdown__content
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="in-stock").filter-dropdown__checkbox
+                            .filter-dropdown__label-title В наличие
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="on-order").filter-dropdown__checkbox
+                            .filter-dropdown__label-title Под заказ
+                  li.filter-form__item
+                    .filter-dropdown
+                      .filter-dropdown__title
+                        h6.title-filter Новинки
+                      .filter-dropdown__content.filter-dropdown__content_radio
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="radio", name="filter-new" checked).filter-dropdown__radio
+                            .filter-dropdown__label-title Все
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="radio", name="filter-new").filter-dropdown__radio
+                            .filter-dropdown__label-title Новинки
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="radio", name="filter-new").filter-dropdown__radio
+                            .filter-dropdown__label-title Акции
+                  li.filter-form__item
+                    .filter-dropdown
+                      .filter-dropdown__title
+                        h6.title-filter Цена
+                      .filter-dropdown__content
+                        .range-slider
+                          input(type="text" name="price_range" ).range-slider__slider
+                          .range-slider__range
+                            .range-slider__range__item 
+                              .range-slider__range__item-text от
+                              input(type="text").range-slider__range__item-number.range-slider__range__item-number_from
+                            .range-slider__range__item 
+                              .range-slider__range__item-text до
+                              input(type="text").range-slider__range__item-number.range-slider__range__item-number_to
+
+
+            li(id="filter-brand").tabs__content-item.filter-tabs__content-item
+              | По марке
       .catalog-section__inner-content
-        - var popularProductList = [
-        -  { title: "BRP Audio-Premium System", price: '68 000', img: 'audio-system.png'},
-        -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
-        -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
-        -  { title: "Спасательное снаряжение", price: '6 900', img: 'rescue-equipment.png', sale: true, notAvailable: true},
-        - ]
-        each product in popularProductList
-          a(href="#" class={'product-item_sale': product.sale === true, 'product-item_not-available': product.notAvailable === true}).product-item
-            .product-item__button.product-item__button_top
-              button(type="button").button-favorite
-                .button-favorite__icon
-            .product-item__image
-              .product-item__hover-text посмотреть товар
-              +image(`content/products/${product.img}`, 'product-item__img')
-            h4.product-item__title #{product.title}
-            .product-item__price #{product.price} ₽
-            .product-item__notify-text нет в наличии
-            object(type="owo/uwu").product-item__inner-link
-              a(href="#").product-item__notify-link Сообщить о поступлении
-            .product-item__button.product-item__button_bottom
-              button(type="button").button-cart
-                +icon('cart', 'button-cart__icon')
+        ul.catalog-product
+          - var jetSkisList = [
+          -  { title: "Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango", price: '1 049 500', img: 'jet-skis/jet-skis-1.png'},
+          -  { title: "Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic", price: '1 100 475', img: 'jet-skis/jet-skis-2.png', sale: true},
+          -  { title: "Гидроцикл BRP SeaDoo GTR 230hp X California green", price: '1 323 700', img: 'jet-skis/jet-skis-3.png'},
+          -  { title: "Гидроцикл BRP SeaDoo GTR 230hp STD Black / Gulfstream", price: '1 323 700', img: 'jet-skis/jet-skis-4.png', sale: true, notAvailable: true},
+          -  { title: "Гидроцикл BRP SeaDoo GTX 300hp LTD Liquid Metal", price: '1 543 000', img: 'jet-skis/jet-skis-5.png'},
+          -  { title: "Гидроцикл BRP SeaDoo Spark 60hp 2 up", price: '732 345', img: 'jet-skis/jet-skis-6.png'},
+          -  { title: "Гидроцикл BRP SeaDoo Spark GTS 90hp Rental", price: '857 666', img: 'jet-skis/jet-skis-7.png'},
+          -  { title: "Гидроцикл BRP SeaDoo WAKE 230hp PRO Teal blue", price: '1 229 711', img: 'jet-skis/jet-skis-8.png', sale: true},
+          -  { title: "Гидроцикл Spark 2-UP 900 Ho Ace Chili Pepper", price: '587 440', img: 'jet-skis/jet-skis-9.png'},
+          -  { title: "Гидроцикл Spark 2-UP 900 Ho Ace Pineapple ", price: '587 440', img: 'jet-skis/jet-skis-10.png'},
+          -  { title: "Гидроцикл BRP Sea-doo Spark 2-UP 900 Ace Vanilla ", price: '587 440', img: 'jet-skis/jet-skis-11.png', sale: true, notAvailable: true},
+          -  { title: "Гидроцикл Spark 3-UP 900 HO Ace IBR Blueberry", price: '587 440', img: 'jet-skis/jet-skis-12.png', notAvailable: true},
+          - ]
+          each jetSki in jetSkisList
+            li.catalog-product__item
+              a(href="#" class={'product-item_sale': jetSki.sale === true, 'product-item_not-available': jetSki.notAvailable === true}).product-item
+                .product-item__button.product-item__button_top
+                  button(type="button").button-favorite
+                    .button-favorite__icon
+                .product-item__image
+                  .product-item__hover-text посмотреть товар
+                  +image(`content/products/${jetSki.img}`, 'product-item__img')
+                h4.product-item__title #{jetSki.title}
+                .product-item__price #{jetSki.price} ₽
+                .product-item__notify-text нет в наличии
+                object(type="owo/uwu").product-item__inner-link
+                  a(href="#").product-item__notify-link Сообщить о поступлении
+                .product-item__button.product-item__button_bottom
+                  button(type="button").button-cart
+                    +icon('cart', 'button-cart__icon')
+        .catalog-section__pagination
+          .pagination
+            ul.pagination__list
+              li.pagination__item.pagination__item_active
+                a(href="#").pagination__link 1
+              li.pagination__item
+                a(href="#").pagination__link 2
+              li.pagination__item
+                a(href="#").pagination__link 3
+              li.pagination__item
+                a(href="#").pagination__link 4
+              li.pagination__item
+                a(href="#").pagination__link 5
+              li.pagination__item
+                a(href="#").pagination__link ...
+              li.pagination__item
+                a(href="#").pagination__link 11

@@ -1,0 +1,32 @@
+.mode-view {
+  display: flex;
+  align-items: center;
+}
+
+.mode-view__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.mode-view__btn {
+  width: 23px;
+  padding: 0;
+
+  &_active {
+    .mode-view__icon {
+      opacity: 1;
+    }
+  }
+}
+
+.mode-view__icon {
+  opacity: 0.3;
+
+  &-grid {
+    fill: transparent;
+    stroke: $main;
+  }
+}

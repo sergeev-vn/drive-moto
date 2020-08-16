@@ -1,0 +1,39 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination__list {
+  display: flex;
+}
+
+.pagination__item {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &_active {
+    .pagination__link {
+      color: $blue;
+      border: 2px solid $blue;
+      font-weight: 600;
+    }
+  }
+}
+
+.pagination__link {
+  font-family: Barlow;
+  color:  $light-gray;
+  font-size: 18px;
+  padding: 10px 16px;
+  border: 2px solid transparent;
+  transition: .1s;
+
+  &:hover {
+    color: $blue;
+    border: 2px solid $blue;
+    font-weight: 600;
+  }
+}

@@ -82,6 +82,8 @@ module.exports = (env, argv) => {
     resolve: {
       alias: {
         images: path.resolve(__dirname, "src/images"),
+        $: path.resolve('node_modules','jquery/src/jquery'),
+        jquery: path.resolve('node_modules','jquery/src/jquery'),
       },
       extensions: ["*", ".js"]
     },
