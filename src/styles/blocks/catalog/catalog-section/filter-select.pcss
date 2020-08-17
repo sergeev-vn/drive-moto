@@ -18,9 +18,10 @@
     border-color: none;
     border: none;
     background: none;
-    padding-right: 30px;
+    padding-right: 35px;
     box-shadow: none;
     font-size: 14px;
+    font-family: Barlow;
   }
   
   .jq-selectbox__trigger {
@@ -32,7 +33,22 @@
     background: svg-load('../../images/icons/arrow-drop.svg', fill=$light-gray);
     width: 12px;
     height: 8px;
-    transform: rotate(180deg)
+
+    top: 50%;
+    transform: rotate(180deg) translateY(50%);
+
+    transition: transform $speed;
+  }
+
+  .jq-selectbox__dropdown {
+    box-shadow: none;
+    border: 1px solid #E0E0E0;
+    border-radius: 0;
+    font-family: Barlow;
+  }
+
+  .jq-selectbox__select-text {
+    width: 100% !important;
   }
 }
 
@@ -49,12 +65,13 @@
 
   &.opened {
     .jq-selectbox__trigger-arrow {
-      transform: rotate(0)
+      transform: rotate(0) translateY(-50%);
     }
   }
 
-  .selected {
-    color: initial;
-    background-color: initial;
+  &.focused {
+    .jq-selectbox__select {
+      border: none;
+    }
   }
 }
