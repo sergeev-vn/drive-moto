@@ -75,7 +75,7 @@ section.catalog-section
                         h6.title-filter Цена
                       .filter-dropdown__content
                         .range-slider
-                          input(type="text" name="price_range" ).range-slider__slider
+                          input(type="text" name="price_range").range-slider__slider
                           .range-slider__range
                             .range-slider__range__item 
                               .range-slider__range__item-text от
@@ -83,6 +83,19 @@ section.catalog-section
                             .range-slider__range__item 
                               .range-slider__range__item-text до
                               input(type="text").range-slider__range__item-number.range-slider__range__item-number_to
+                  li.filter-form__item
+                    .filter-form__item-list
+                      .filter-select 
+                        .filter-select__title
+                          h6.title-filter Мощность, л.с.
+                        .filter-select__select-wrap
+                          select.filter-select__select
+                            option 90
+                            option 130
+                            option 154
+                            option 230
+                            option 300
+
 
 
             li(id="filter-brand").tabs__content-item.filter-tabs__content-item

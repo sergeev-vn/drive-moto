@@ -1,0 +1,19 @@
+include pages/mixins
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Drive Moto
+    +favicon
+  body
+    .wrapper
+      include pages/blocks/common/header
+      include pages/blocks/index/banner-section
+      include pages/blocks/index/search
+      include pages/blocks/index/categories-section
+      include pages/blocks/index/popular-products
+      include pages/blocks/index/banner-delimiter
+      include pages/blocks/index/related-products
+      include pages/blocks/common/footer
