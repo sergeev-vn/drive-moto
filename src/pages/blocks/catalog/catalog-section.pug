@@ -141,10 +141,8 @@ section.catalog-section
                       .filter-dropdown__title
                         h6.title-filter Модель
                       .filter-dropdown__content.filter-dropdown__content_checkbox
-                        .filter-dropdown__content-item.filter-dropdown__content-item_
-                          label.filter-dropdown__label
-                            input(type="checkbox", name="sea-doo-spark-2" checked).filter-dropdown__checkbox
-                            .filter-dropdown__label-title Sea-doo Spark 2
+                        .filter-dropdown__content-item.filter-dropdown__content-item_search
+                          input(type="search" placeholder="Введите модель").filter-dropdown__input-search
                         .filter-dropdown__content-item
                           label.filter-dropdown__label
                             input(type="checkbox", name="sea-doo-spark-2" checked).filter-dropdown__checkbox
@@ -163,7 +161,60 @@ section.catalog-section
                             .filter-dropdown__label-title SeaDoo GTR 230
                         .filter-dropdown__btn
                           button(type="button").basic-link.basic-link_size Показать еще
-
+                  li.filter-form__item
+                    .filter-dropdown
+                      .filter-dropdown__title
+                        h6.title-filter Акции
+                      .filter-dropdown__content.filter-dropdown__content_checkbox.filter-dropdown__content__checkbox-rect
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="sale" checked).filter-dropdown__checkbox
+                            .filter-dropdown__label-title SALE
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="new").filter-dropdown__checkbox
+                            .filter-dropdown__label-title NEW
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="hit").filter-dropdown__checkbox
+                            .filter-dropdown__label-title HIT
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="dealer" checked).filter-dropdown__checkbox
+                            .filter-dropdown__label-title ДИЛЕР
+                  li.filter-form__item
+                    .filter-dropdown
+                      .filter-dropdown__title
+                        h6.title-filter Страны
+                      .filter-dropdown__content.filter-dropdown__content_checkbox
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="russia" checked).filter-dropdown__checkbox
+                            .filter-dropdown__label-title Россия
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="germany" checked).filter-dropdown__checkbox
+                            .filter-dropdown__label-title Германия
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="china").filter-dropdown__checkbox
+                            .filter-dropdown__label-title Китай
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="usa").filter-dropdown__checkbox
+                            .filter-dropdown__label-title CША
+                        .filter-dropdown__btn
+                          button(type="button").basic-link.basic-link_size Показать еще
+                  li.filter-form__item
+                    .filter-form__item__button
+                      button(type="submit").button-rectangle.button-rectangle_filter ВЫБРАТЬ
+                    .filter-dropdown.filter-dropdown_extra
+                      .filter-dropdown__title
+                        h6.title-filter Дополнительные параметры
+                      .filter-dropdown__content
+                        | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum minima aspernatur deserunt neque ipsa illum voluptate aperiam tempora nisi asperiores dolorem quo quod, ut libero rerum praesentium vel perferendis iure?
+                    .filter-form__item__button-extra-link
+                      button(type="reset").basic-link Сбросить фильтр
 
 
             li(id="filter-brand").tabs__content-item.filter-tabs__content-item
