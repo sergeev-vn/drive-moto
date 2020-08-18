@@ -43,7 +43,7 @@ section.catalog-section
                     .filter-dropdown
                       .filter-dropdown__title
                         h6.title-filter Наличие
-                      .filter-dropdown__content
+                      .filter-dropdown__content.filter-dropdown__content_checkbox
                         .filter-dropdown__content-item
                           label.filter-dropdown__label
                             input(type="checkbox", name="in-stock").filter-dropdown__checkbox
@@ -95,6 +95,74 @@ section.catalog-section
                             option 154
                             option 230
                             option 300
+                    .filter-form__item-list
+                      .filter-select 
+                        .filter-select__title
+                          h6.title-filter Мощность двигателя, л.с.
+                        .filter-select__select-wrap
+                          select.filter-select__select
+                            option 55
+                            option 80
+                            option 90
+                            option 100
+                            option 110
+                    .filter-form__item-list
+                      .filter-select 
+                        .filter-select__title
+                          h6.title-filter Макс. скорость
+                        .filter-select__select-wrap
+                          select.filter-select__select
+                            option 205
+                            option 230
+                            option 250
+                            option 280
+                            option 300
+                  li.filter-form__item
+                    .filter-dropdown
+                      .filter-dropdown__title
+                        h6.title-filter Бренд
+                      .filter-dropdown__content.filter-dropdown__content_checkbox
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="brp" checked).filter-dropdown__checkbox
+                            .filter-dropdown__label-title BRP
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="spark-2" checked).filter-dropdown__checkbox
+                            .filter-dropdown__label-title Spark 2
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="spark-3").filter-dropdown__checkbox
+                            .filter-dropdown__label-title Spark 3
+                        .filter-dropdown__btn
+                          button(type="button").basic-link.basic-link_size Показать еще
+                  li.filter-form__item
+                    .filter-dropdown
+                      .filter-dropdown__title
+                        h6.title-filter Модель
+                      .filter-dropdown__content.filter-dropdown__content_checkbox
+                        .filter-dropdown__content-item.filter-dropdown__content-item_
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="sea-doo-spark-2" checked).filter-dropdown__checkbox
+                            .filter-dropdown__label-title Sea-doo Spark 2
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="sea-doo-spark-2" checked).filter-dropdown__checkbox
+                            .filter-dropdown__label-title Sea-doo Spark 2
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="sea-doo-spark-90" checked).filter-dropdown__checkbox
+                            .filter-dropdown__label-title SeaDoo Spark 90 
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="sea-doo-spark-155").filter-dropdown__checkbox
+                            .filter-dropdown__label-title SeaDoo GTI 155
+                        .filter-dropdown__content-item
+                          label.filter-dropdown__label
+                            input(type="checkbox", name="sea-doo-spark-230").filter-dropdown__checkbox
+                            .filter-dropdown__label-title SeaDoo GTR 230
+                        .filter-dropdown__btn
+                          button(type="button").basic-link.basic-link_size Показать еще
 
 
 
@@ -129,7 +197,7 @@ section.catalog-section
                 .product-item__price #{jetSki.price} ₽
                 .product-item__notify-text нет в наличии
                 object(type="owo/uwu").product-item__inner-link
-                  a(href="#").product-item__notify-link Сообщить о поступлении
+                  button(type="button").basic-link Сообщить о поступлении
                 .product-item__button.product-item__button_bottom
                   button(type="button").button-cart
                     +icon('cart', 'button-cart__icon')

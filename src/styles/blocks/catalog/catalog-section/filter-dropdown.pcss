@@ -21,22 +21,29 @@
 
 .filter-dropdown__content {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
 
   &_radio {
+    margin-bottom: -19px;
+
     .filter-dropdown__content-item {
       flex-basis: initial;
       margin-right: 24px;
       white-space: nowrap;
     }
   }
+
+  &_checkbox {
+    margin-bottom: -19px;
+  }
 }
 
 .filter-dropdown__content-item {
   flex-basis: 50%;
-  margin-right: 10px;
   white-space: nowrap;
-
+  margin-bottom: 19px;
+  
   &:last-child {
     margin-right: 0;
   }
@@ -73,11 +80,12 @@
     .jq-checkbox__div {
       border-color: $secondary;
       margin: 0;
-      border-width: 2px;
+      border-width: 1px;
       position: absolute;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(-50deg);
+      width: 6px;
     }
   }
 }
@@ -111,5 +119,14 @@
 
   &.focused {
     border: none;
+  }
+}
+
+.filter-dropdown__btn {
+  width: 100%;
+  margin-bottom: 19px;
+
+  .basic-link {
+    margin-top: 5px;
   }
 }
