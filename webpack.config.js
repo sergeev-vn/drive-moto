@@ -68,7 +68,8 @@ module.exports = (env, argv) => {
   const config = {
     entry: {
       main: "./src/main.js",
-      catalog: "./src/main.js"
+      catalog: "./src/main.js",
+      cardProduct: "./src/main.js"
     },
     output: {
       path: path.resolve(__dirname, "./dist"),
@@ -93,6 +94,7 @@ module.exports = (env, argv) => {
       historyApiFallback: {
         rewrites: [
           { from: /^\/catalog/, to: '/catalog.html' },
+          { from: /^\/card-product/, to: '/card-product.html' },
         ]
       }
     },
@@ -108,6 +110,11 @@ module.exports = (env, argv) => {
         filename: "catalog.html",
         template: "src/pages/catalog.pug",
         chunks: ["catalog"]
+      }),
+      new HtmlWebpackPlugin({
+        filename: "card-product.html",
+        template: "src/pages/card-product.pug",
+        chunks: ["cardProduct"]
       }),
       new SpriteLoaderPlugin({ plainSprite: true }),
       new webpack.ProvidePlugin({

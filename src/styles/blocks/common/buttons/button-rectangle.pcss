@@ -13,7 +13,18 @@
   }
   
   &_filter {
-    color: #BDBEC2;
+    background-color: $blue;
+    color: $secondary;
     padding: 6% 29% 5%;
+  }
+
+  &:disabled {
+    color: #BDBEC2;
+    background-color: $gray;
+    cursor: not-allowed;
+
+    &:hover {
+      box-shadow: none;
+    }
   }
 }

@@ -1,0 +1,52 @@
+.sorting-order {
+  font-size: 14px;
+
+  + .jq-selectbox__select {
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #D7D9DF;
+    padding-left: 20px;
+    height: 33px;
+    text-shadow: none;
+
+    .jq-selectbox__select-text {
+      width: 100% !important;
+    }
+
+    .jq-selectbox__trigger {
+      border: none;
+    }
+
+    .jq-selectbox__trigger-arrow {
+      border: none;
+      background-image: svg-load('../../images/icons/arrow-drop.svg', fill=$light-gray);
+      width: 12px;
+      height: 8px;
+      top: 50%;
+      transform: rotate(180deg) translateY(50%);
+      transition: transform $speed;
+    }
+  }
+  ~ .jq-selectbox__dropdown {
+    border: 1px solid #D7D9DF;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+.catalog-section__sorting-item-sorting-order {
+  .jq-selectbox {
+    &.focused {
+      .jq-selectbox__select {
+        border: 1px solid #d7d9df !important;
+      }
+    }
+
+    &.opened {
+      .jq-selectbox__trigger-arrow {
+        transform: rotate(0) translateY(-50%);
+      }
+    }
+  }
+}
