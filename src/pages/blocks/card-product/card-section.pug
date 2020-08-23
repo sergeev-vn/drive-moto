@@ -1,0 +1,54 @@
+section.card-section
+  .container
+    .card-section__inner
+      .card-section__product.card-section__product_sale
+        .card-section__image
+          +image(`content/products/jet-skis/jet-skis-blue-hd.png`, 'card-section__img')
+        .card-section__old-price
+          span.card-section__old-price-text 1 200 475 ₽
+        .card-section__new-price 1 100 475 ₽
+        .card-section__product-button
+          button(type="button").basic-link.basic-link_decoration Нашли дешевле? Снизим цену!
+      .card-section__description
+        .card-section__title
+          h1.title.title_size Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic
+        .card-section__code Код товара: 366666-2
+        ul.card-section__description-buttons
+          li.card-section__description-buttons-item
+            button(type="button").button-favorite
+              .button-favorite__icon
+          li.card-section__description-buttons-item
+            button(type="button").button-comparison
+              +icon('comparison', 'button-comparison__icon')
+          li.card-section__description-buttons-item
+            .rate(data-rateyo-rating="4")
+        .card-section__tabs
+          .tabs.card-section-tabs
+            ul.tabs__tablist.card-section-tabs__tabs
+              li.tabs__tablist-item.card-section-tabs__tabs-item.tabs__tablist-item_active
+                a(href="#specs" title="Характеристики").tabs__tablist-link.card-section-tabs__tabs-link Характеристики
+              li.tabs__tablist-item.card-section-tabs__tabs-item
+                a(href="#availb" title="Наличие в магазине").tabs__tablist-link.card-section-tabs__tabs-link Наличие в магазине
+            ul.tabs__content.card-section-tabs__content
+              li(id="specs").tabs__content-item.card-section-tabs__content-item.tabs__content-item_active
+                ul.characteristic
+                  li.characteristic__item
+                    .characteristic__item-name Производитель
+                    .characteristic__item-property Канада
+                  li.characteristic__item
+                    .characteristic__item-name Количество мест, шт:
+                    .characteristic__item-property 3
+                  li.characteristic__item
+                    .characteristic__item-name Мощность, л.с.
+                    .characteristic__item-property 155
+                  li.characteristic__item
+                    .characteristic__item-name Тип двигателя
+                    .characteristic__item-property Бензиновый
+                  li.characteristic__item
+                    .characteristic__item-name Год выпуска
+                    .characteristic__item-property 	2018
+                button(type="button").basic-link.basic-link_size Показать еще
+              li(id="availb").tabs__content-item.card-section-tabs__content-item
+                | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias iste sint voluptatibus illo exercitationem saepe mollitia dignissimos et, fuga blanditiis, facere cupiditate fugiat sequi impedit similique officia non id voluptas.
+        .card-section__description-order-btn
+          button(type="submit").button-basic.button-basic_weight.button-basic_padding купить

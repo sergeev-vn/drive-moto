@@ -10,6 +10,7 @@ html(lang="en")
   body
     .wrapper
       include blocks/common/header
-      include blocks/common/breadcrumbs
-      //- include blocks/catalog/catalog-section
+      +breadcrumbs('Главная', 'Гидроциклы', 'Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic')
+      include blocks/card-product/card-section
+      include blocks/card-product/card-tabs
       include blocks/common/footer

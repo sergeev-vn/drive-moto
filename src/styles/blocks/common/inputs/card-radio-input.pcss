@@ -1,0 +1,35 @@
+.card-radio-input {
+  margin: 0;
+  vertical-align: middle;
+  box-shadow: none;
+  background: transparent;
+  width: 14px;
+  height: 14px;
+  border: 1px solid $light-gray;
+  border-radius: 2px;
+  transition: $speed;
+  
+  &.checked {
+    // background-color: $blue;
+    border: 2px solid $blue;
+    border-radius: 2px;
+
+    .jq-radio__div {
+      background-color: $blue;
+      border: none;
+      border-radius: 1px;
+      margin: 0;
+      width: 6px;
+      height: 6px;
+      box-shadow: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &.focused {
+    border: 2px solid $blue;
+  }
+}

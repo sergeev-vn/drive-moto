@@ -67,9 +67,7 @@ module.exports = (env, argv) => {
 
   const config = {
     entry: {
-      main: "./src/main.js",
-      catalog: "./src/main.js",
-      cardProduct: "./src/main.js"
+      main: "./src/main.js"
     },
     output: {
       path: path.resolve(__dirname, "./dist"),
@@ -91,35 +89,38 @@ module.exports = (env, argv) => {
     devServer: {
       noInfo: false,
       overlay: true,
-      historyApiFallback: {
-        rewrites: [
-          { from: /^\/catalog/, to: '/catalog.html' },
-          { from: /^\/card-product/, to: '/card-product.html' },
-        ]
-      }
+      hot: true,
+      host: 'localhost',
+      port: 8080,
+      historyApiFallback: true,
     },
     performance: {
       hints: false
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "src/index.pug",
+        template: "./src/index.pug",
+        // inject: true,
         chunks: ["main"]
       }),
       new HtmlWebpackPlugin({
+        template: "./src/pages/catalog.pug",
         filename: "catalog.html",
-        template: "src/pages/catalog.pug",
-        chunks: ["catalog"]
+        // inject: true,
+        // chunks: ["catalog"]
       }),
       new HtmlWebpackPlugin({
+        template: "./src/pages/card-product.pug",
         filename: "card-product.html",
-        template: "src/pages/card-product.pug",
-        chunks: ["cardProduct"]
+        // inject: true,
+        // chunks: ["cardProduct"]
       }),
       new SpriteLoaderPlugin({ plainSprite: true }),
       new webpack.ProvidePlugin({
         $: "jquery",
-        jQuery: "jquery"
+        jQuery: "jquery",
+        'window.$': 'jquery',
+        'window.jQuery': 'jquery'
       })
     ],
     devtool: "#eval-source-map"

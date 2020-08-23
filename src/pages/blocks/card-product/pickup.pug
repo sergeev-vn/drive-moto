@@ -1,0 +1,32 @@
+.pickup
+  .pickup__inner
+    form.pickup-form
+      .pickup-form__top
+        .pickup-form__search-field
+          label.pickup-form__search-field-label
+            span.pickup-form__search-field-label-text Магазин
+            .card-search-input__wrap
+              input(type="text").card-search-input
+              +icon('magnifier', 'card-search-input__icon')
+        .pickup-form__search-radio-buttons
+          label.pickup-form__search-radio-buttons-label
+            input(type="radio" name="take").card-radio-input
+            span.pickup-form__search-radio-label-text Забрать сегодня
+          label.pickup-form__search-radio-buttons-label
+            input(type="radio" name="take" checked).card-radio-input
+            span.pickup-form__search-radio-label-text Забрать в течение недели
+      .pickup-form__bottom
+        ul.pickup-form__table
+          li.pickup-form__table-thead
+            .pickup-form__table-cell Адрес
+            .pickup-form__table-cell Режим работы
+            .pickup-form__table-cell Доступно
+            .pickup-form__table-cell Количество
+            .pickup-form__table-cell 
+          li.pickup-form__table-row
+            .pickup-form__table-cell Москва, ул. Науки 25
+            .pickup-form__table-cell Режим работы
+            .pickup-form__table-cell В наличии
+            .pickup-form__table-cell 1 
+            .pickup-form__table-cell
+              button(type="submit").button-basic.button-basic_weight.button-basic_padding купить

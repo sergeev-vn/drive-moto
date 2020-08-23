@@ -1,0 +1,32 @@
+.card-more-tabs__tabs {
+  background-color: $gray;
+  padding: 22px 34px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-more-tabs__tabs-item {
+  color: rgba($main, 0.6);
+  font-size: 20px;
+  transition: $speed;
+  
+  &::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $blue;
+    position: absolute;
+    bottom: -5px;
+    opacity: 0;
+    transition: opacity $speed;
+  }
+
+  &.tabs__tablist-item_active{
+    position: relative;
+    color: rgba($main, 1);
+  
+    &::after {
+      opacity: 1;
+    }
+  }
+}

@@ -8,3 +8,11 @@ mixin image(path, className)
 
 mixin favicon()
   link(rel="icon" type="image/png" href=require("images/favicon.png"))
+
+mixin breadcrumbs(...arg)
+  .breadcrumbs
+    .container
+      ul.breadcrumbs__list
+        each val in [...arg]
+          li.breadcrumbs__item
+            a(href="#").breadcrumbs__link= val
