@@ -18,15 +18,60 @@
       .pickup-form__bottom
         ul.pickup-form__table
           li.pickup-form__table-thead
-            .pickup-form__table-cell Адрес
-            .pickup-form__table-cell Режим работы
-            .pickup-form__table-cell Доступно
-            .pickup-form__table-cell Количество
-            .pickup-form__table-cell 
+            .pickup-form__table-cell.pickup-form__table-cell-address Адрес
+            .pickup-form__table-cell.pickup-form__table-cell-workhour Режим работы
+            .pickup-form__table-cell.pickup-form__table-cell-available Доступно
+            .pickup-form__table-cell.pickup-form__table-cell-amount Количество
+            .pickup-form__table-cell.pickup-form__table-cell-button
           li.pickup-form__table-row
-            .pickup-form__table-cell Москва, ул. Науки 25
-            .pickup-form__table-cell Режим работы
-            .pickup-form__table-cell В наличии
-            .pickup-form__table-cell 1 
-            .pickup-form__table-cell
-              button(type="submit").button-basic.button-basic_weight.button-basic_padding купить
+            .pickup-form__table-cell.pickup-form__table-cell-address Москва, ул. Науки 25
+            .pickup-form__table-cell.pickup-form__table-cell-workhour
+              .pickup-form__table-cell-row
+                .pickup-form__table-cell-text пн-сб:
+                .pickup-form__table-cell-text 08:00-19:00
+              .pickup-form__table-cell-row
+                .pickup-form__table-cell-text вс:
+                .pickup-form__table-cell-text 09:00-17:00
+            .pickup-form__table-cell.pickup-form__table-cell-available В наличии
+            .pickup-form__table-cell.pickup-form__table-cell-amount 1 
+            .pickup-form__table-cell.pickup-form__table-cell-button
+              button(type="submit").button-basic.button-basic_weight.button-basic_padding-small купить
+          li.pickup-form__table-row
+            .pickup-form__table-cell.pickup-form__table-cell-address Москва, ул.  Южная 134
+            .pickup-form__table-cell.pickup-form__table-cell-workhour
+              .pickup-form__table-cell-row
+                .pickup-form__table-cell-text пн-сб:
+                .pickup-form__table-cell-text 08:00-19:00
+              .pickup-form__table-cell-row
+                .pickup-form__table-cell-text вс:
+                .pickup-form__table-cell-text 09:00-17:00
+            .pickup-form__table-cell.pickup-form__table-cell-available В наличии
+            .pickup-form__table-cell.pickup-form__table-cell-amount 2 
+            .pickup-form__table-cell.pickup-form__table-cell-button
+              button(type="submit").button-basic.button-basic_weight.button-basic_padding-small купить
+          li.pickup-form__table-row
+            .pickup-form__table-cell.pickup-form__table-cell-address Санкт-Петербург, ул. Красная 19
+            .pickup-form__table-cell.pickup-form__table-cell-workhour
+              .pickup-form__table-cell-row
+                .pickup-form__table-cell-text пн-сб:
+                .pickup-form__table-cell-text 08:00-19:00
+              .pickup-form__table-cell-row
+                .pickup-form__table-cell-text вс:
+                .pickup-form__table-cell-text 09:00-17:00
+            .pickup-form__table-cell.pickup-form__table-cell-available Нет в наличии
+            .pickup-form__table-cell.pickup-form__table-cell-amount 0
+            .pickup-form__table-cell.pickup-form__table-cell-button
+              button(type="submit").button-basic.button-basic_weight.button-basic_padding-small купить
+          li.pickup-form__table-row
+            .pickup-form__table-cell.pickup-form__table-cell-address Киев, ул Шевченко 167
+            .pickup-form__table-cell.pickup-form__table-cell-workhour
+              .pickup-form__table-cell-row
+                .pickup-form__table-cell-text пн-сб:
+                .pickup-form__table-cell-text 08:00-19:00
+              .pickup-form__table-cell-row
+                .pickup-form__table-cell-text вс:
+                .pickup-form__table-cell-text 09:00-17:00
+            .pickup-form__table-cell.pickup-form__table-cell-available Нет в наличии
+            .pickup-form__table-cell.pickup-form__table-cell-amount 0
+            .pickup-form__table-cell.pickup-form__table-cell-button
+              button(type="submit").button-basic.button-basic_weight.button-basic_padding-small купить

@@ -7,12 +7,13 @@
   height: 14px;
   border: 1px solid $light-gray;
   border-radius: 2px;
-  transition: $speed;
+  // transition: $speed;
   
   &.checked {
     // background-color: $blue;
     border: 2px solid $blue;
     border-radius: 2px;
+    
 
     .jq-radio__div {
       background-color: $blue;
@@ -26,6 +27,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      transition: background-color $speed;
     }
   }
 

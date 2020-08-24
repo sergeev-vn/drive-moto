@@ -47,9 +47,15 @@
   width: 100%;
 }
 
-.pickup-form__table-caption {
+.pickup-form__table-thead {
   display: table-header-group;
   font-size: 20px;
+
+  .pickup-form__table-cell {
+    border: none;
+    padding-bottom: 40px;
+    padding-top: 0;
+  }
 }
 
 .pickup-form__table-row {
@@ -60,4 +66,39 @@
 
 .pickup-form__table-cell {
   display: table-cell;
+  border-bottom: 1px solid rgba($main, 0.1);
+  padding-bottom: 20px;
+  padding-top:  20px;
+
+  &-address {
+    padding-right: 7%;
+  }
+
+  &-workhour {
+    padding-right: 8.3%;
+  }
+
+  &-available {
+    padding-right: 9%;
+  }
+
+  &-amount {
+    padding-right: 5%;
+  }
+
+  &-button {
+    // max-width: 219px;
+    // width: 100%;
+    text-align: right;
+  }
+}
+
+.pickup-form__table-cell-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
