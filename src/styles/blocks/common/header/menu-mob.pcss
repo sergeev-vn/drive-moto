@@ -1,0 +1,41 @@
+.menu-mob {
+  width: 243px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  transform: translateX(-100%);
+  z-index: 20;
+  transition: transform $speed;
+
+  &_opened {
+    transform: translateX(0);
+  }
+}
+
+.menu-mob__item {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-mob__link {
+  display: flex;
+  padding-top: 36px;
+  font-size: 20px;
+}
+
+.menu-mob__link-icon {
+  width: 20px;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+
+.menu-mob__icon {
+  // position: absolute;
+  // left: 10px;
+  // bottom: 0;
+  vertical-align: bottom;
+}
+
+.menu-mob__link-text {
+  padding-left: 43px;
+}
