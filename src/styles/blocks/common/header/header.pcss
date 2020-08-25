@@ -8,6 +8,7 @@
   font-size: 20px;
   line-height: 24px;
   font-style: normal;
+  white-space: nowrap;
 }
 
 .header__top-item {
@@ -16,9 +17,17 @@
 }
 
 .header__address {
-  margin-right: 60px;
+  margin-right: 86px;
   margin-left: 30px;
-  width: 265px;
+  max-width: 265px;
+
+  @include w1100 {
+    margin-right: 30px;
+  }
+  
+  @include w530 {
+    display: none;
+  }
 }
 
 .header__bottom {
@@ -30,4 +39,17 @@
   display: flex;
   justify-content: center;
   align-self: center;
+  padding: 0 5%;
+
+  @include w1100 {
+    padding: 0 3%;
+  }
+}
+
+.header__humburger-button {
+  display: none;
+
+  @include w920 {
+    display: block;
+  }
 }

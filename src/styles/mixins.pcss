@@ -1,11 +1,23 @@
-@mixin desktopHd() {
-  @media screen and (max-width: 1800px) {
+@mixin desktop() {
+  @media screen and (max-width: 1200px) {
     @content;
   }
 }
 
-@mixin desktop() {
-  @media screen and (max-width: 1200px) {
+@mixin w1100() {
+  @media screen and (max-width: 1100px) {
+    @content;
+  }
+}
+
+@mixin w920() {
+  @media screen and (max-width: 920px) {
+    @content;
+  }
+}
+
+@mixin w530() {
+  @media screen and (max-width: 920px) {
     @content;
   }
 }

@@ -1,3 +1,9 @@
+.menu {
+  @include w920 {
+    display: none;
+  }
+}
+
 .menu__list {
   display: flex;
 }
@@ -7,6 +13,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include w1100 {
+    margin-right: 20px;
   }
 }
 

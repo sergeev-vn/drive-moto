@@ -2,6 +2,11 @@ header.header
   .header__top
     .container 
       .header__top-inner
+        .header__humburger-button
+          button(type='button').humburger-button
+            .humburger-button__row
+            .humburger-button__row
+            .humburger-button__row
         nav.menu
           ul.menu__list
             li.menu__item
@@ -27,6 +32,9 @@ header.header
               a(href="#").user-list__link.user-list__link_cart
                 +icon('cart', 'user-list__icon')
                 .cart__num 1
+  ul.menu-mob
+    li.menu-mob__item
+      a.menu-mob__link(href="#") Войти
   .header__bottom
     .container
       ul.menu-categories

@@ -1,6 +1,10 @@
 .user-list {
   display: flex;
   margin-right: 23px;
+
+  @include phones {
+    margin-right: 10px;
+  }
 }
 
 .user-list__item {
