@@ -2,4 +2,29 @@
   width: 80px;
   height: 76px;
   display: block;
+  transition: $speed;
+  
+  @include phones {
+    width: 81px;
+    height: 25px;
+    line-height: 1.5;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.logo__icon {
+  @include phones {
+    display: none;
+  }
+}
+
+.logo__icon-mob {
+  display: none;
+
+  @include phones {
+    display: inline;
+  }
 }

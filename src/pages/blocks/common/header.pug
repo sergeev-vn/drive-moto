@@ -18,6 +18,7 @@ header.header
         .header__logo
           a(href="#").logo
             +icon('logo', 'logo__icon')
+            +icon('logo-mob', 'logo__icon-mob')
         .header__top-item
           .header__address
             address.address Москва,  ул. Науки  25
@@ -40,7 +41,7 @@ header.header
           a(href="#" title="Квадроциклы").menu-categories__link Квадроциклы
         li.menu-categories__item
           a(href="#" title="Катера").menu-categories__link Катера
-        li.menu-categories__item
+        li.menu-categories__item.menu-categories__item_active
           a(href="#" title="Гидроциклы").menu-categories__link Гидроциклы
         li.menu-categories__item
           a(href="#" title="Лодки").menu-categories__link Лодки
@@ -50,63 +51,76 @@ header.header
           a(href="#" title="Двигатели").menu-categories__link Двигатели
         li.menu-categories__item
           a(href="#" title="Запчасти").menu-categories__link Запчасти
-  ul.menu-mob
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-icon
-          +icon('person', 'menu-mob__icon')
-        .menu-mob__link-text Войти
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-icon
-          +icon('person', 'menu-mob__icon')
-        .menu-mob__link-text Регистрация
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-icon
-          +icon('heart', 'menu-mob__icon')
-        .menu-mob__link-text Избранное
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-icon
-          +icon('cart', 'menu-mob__icon')
-        .menu-mob__link-text Корзина
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-icon
-          +icon('store', 'menu-mob__icon')
-        .menu-mob__link-text Магазины
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-icon
-          +icon('sale', 'menu-mob__icon')
-        .menu-mob__link-text Акции
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-icon
-          +icon('delivery', 'menu-mob__icon')
-        .menu-mob__link-text Доставка и оплата
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-text Квадроциклы
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-text Катера
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-text Гидроциклы
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-text Лодки
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-text Вездеходы
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-text Снегоходы
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-text Двигатели
-    li.menu-mob__item
-      a(href="#").menu-mob__link
-        .menu-mob__link-text Запчасти
+  nav.menu-mob
+    ul.menu-mob__list
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-icon
+            +icon('person', 'menu-mob__icon')
+          .menu-mob__link-text Войти
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-icon
+            +icon('person', 'menu-mob__icon')
+          .menu-mob__link-text Регистрация
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-icon
+            +icon('heart', 'menu-mob__icon')
+          .menu-mob__link-text Избранное
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-icon.menu-mob__link-icon
+            +icon('cart', 'menu-mob__icon')
+          .menu-mob__link-text Корзина
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-icon.menu-mob__link-icon_store
+            +icon('store', 'menu-mob__icon menu-mob__icon_store')
+          .menu-mob__link-text Магазины
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-icon
+            +icon('sale', 'menu-mob__icon')
+          .menu-mob__link-text Акции
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-icon
+            +icon('delivery', 'menu-mob__icon menu-mob__icon_delivery')
+          .menu-mob__link-text Доставка и оплата
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-text Квадроциклы
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-text Катера
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-text Гидроциклы
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-text Лодки
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-text Вездеходы
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-text Снегоходы
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-text Двигатели
+      li.menu-mob__item
+        a(href="#").menu-mob__link
+          .menu-mob__link-text Запчасти
+      li.menu-mob__item
+        .menu-mob__address Москва,
+          br
+          | ул. Науки  25
+    ul.menu-mob__line
+      .container.menu-mob__flex
+        li.menu-mob__line-item
+          a(href="#").menu-mob__line-link Магазины
+        li.menu-mob__line-item
+          a(href="#").menu-mob__line-link Акции
+        li.menu-mob__line-item
+          a(href="#").menu-mob__line-link Доставка и оплата

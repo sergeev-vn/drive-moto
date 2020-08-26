@@ -9,6 +9,11 @@
   line-height: 24px;
   font-style: normal;
   white-space: nowrap;
+
+  @include phones {
+    padding-top: 20px;
+    padding-bottom: 14px;
+  }
 }
 
 .header__top-item {
@@ -32,6 +37,10 @@
 
 .header__bottom {
   background-color: $gray;
+
+  @include w920 {
+    display: none;
+  }
 }
 
 .header__logo {

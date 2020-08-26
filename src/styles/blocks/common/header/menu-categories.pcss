@@ -10,6 +10,19 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &_active {
+    .menu-categories__link {
+      font-weight: 600;
+
+      &::after {
+        width: 100%;
+        right: auto;
+        left: 0;
+        background-color: $blue;
+      }
+    }
+  }
 }
 
 .menu-categories__link {
