@@ -1,10 +1,37 @@
 .banner-section {
   margin-top: 79px;
+
+  @include w920 {
+    margin-top: 60px;
+  }
+
+  @include tablets {
+    margin-top: 50px;
+
+    .arrow {
+      display: none;
+    }
+  }
+
+  @include w530 {
+    margin-top: 25px;
+  }
+}
+
+.banner-section__container {
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .banner-section__inner {
   display: flex;
   justify-content: space-between;
+
+  @include w920 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .banner-section__slider-inner {
@@ -13,6 +40,18 @@
 }
 
 .banner-section__slider {
-  flex: 1;
   overflow: hidden;
+  margin-right: 2%;
+
+
+  @include w920 {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.banner-section__item {
+  @include w530 {
+    margin: 0 5%;
+  }
 }
