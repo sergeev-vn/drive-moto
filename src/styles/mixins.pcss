@@ -1,9 +1,20 @@
+@mixin w1320() {
+  @media screen and (max-width: 1320px) {
+    @content;
+  }
+}
+
 @mixin desktop() {
   @media screen and (max-width: 1200px) {
     @content;
   }
 }
 
+@mixin w1176() {
+  @media screen and (max-width: 1176px) {
+    @content;
+  }
+}
 @mixin w1100() {
   @media screen and (max-width: 1100px) {
     @content;
@@ -37,6 +48,12 @@
 
 @mixin phones() {
   @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin w320() {
+  @media screen and (max-width: 320px) {
     @content;
   }
 }

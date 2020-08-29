@@ -13,7 +13,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
+  @include w1176 {
+    margin: 0 auto;
+  }
+
   &:hover {
     box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
     border-color: transparent;

@@ -7,9 +7,31 @@
   overflow: hidden;
 }
 
+.banner-delimiter__link {
+  @include big-phones {
+    background: url('../images/content/banners/banner-mob.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 130px;
+  }
+
+  @include w320 {
+    background: url('../images/content/banners/banner-mob-320.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 90px;
+  }
+}
+
 .banner-delimiter__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+
+  @include big-phones {
+    display: none;
+  }
 }

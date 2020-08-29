@@ -1,9 +1,18 @@
 .products-tabs {
   margin-bottom: 36px;
+
+  @include w1320 {
+    margin-bottom: 20px;
+  }
 }
 
 .products-tabs__tabs {
   padding-bottom: 10px;
+  overflow: auto;
+  
+  @include tablets {
+    width: 105%;
+  }
 }
 
 .products-tabs__tabs-item {
@@ -21,6 +30,10 @@
 
     &::after {
       opacity: 1;
+    }
+
+    @include tablets {
+      font-weight: bold;
     }
   }
 }
