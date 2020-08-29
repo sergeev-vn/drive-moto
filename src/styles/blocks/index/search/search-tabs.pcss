@@ -2,6 +2,13 @@
   .tabs__tablist-item_active {
     background: $gray;
     border-radius: 5px;
+
+    @include tablets {
+      background: initial;
+      font-weight: 600;
+      border-radius: initial;
+      border-bottom: 2px solid $blue;
+    }
   }
 
   .tabs__content-item_active {
@@ -11,6 +18,14 @@
 
 .search-tabs__tabs-item {
   transition: $speed;
+
+  @include tablets {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .search-tabs__tabs {
@@ -25,6 +40,14 @@
   font-size: 20px;
   line-height: 24px;
   padding: 11px 26px;
+
+  @include tablets {
+    padding: 11px 0;
+  }
+}
+
+.search-tabs__content {
+  padding-right: 10px;
 }
 
 .search-tabs__content-item {

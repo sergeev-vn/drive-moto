@@ -25,16 +25,20 @@
     padding: 10px 40px;
   }
 
-  &_mobile {
-    font-size: 0;
-    // font-weight: bold;
-    // font-size: 14px;
-    // letter-spacing: 0.12em;
-    // text-transform: uppercase;
-    // color: $secondary;
-    // background: $blue;
-    // border-radius: 3px;
-    // padding: 17px 40px;
-    // transition: $speed;
+  &_mobile { 
+    @include tablets {
+      font-size: 0;
+      background:  svg-load('../../images/icons/magnifier.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+    }
+
+    &:hover {
+      background-color: initial;
+    }
   }
 }
