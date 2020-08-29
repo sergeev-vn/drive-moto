@@ -33,18 +33,19 @@
   }
 }
 
-@mixin w530() {
-  @media screen and (max-width: 530px) {
-    @content;
-  }
-}
-
 @mixin big-phones() {
   @media screen and (max-width: 640px) {
     @content;
   }
   
 }
+
+@mixin w530() {
+  @media screen and (max-width: 530px) {
+    @content;
+  }
+}
+
 
 @mixin phones() {
   @media screen and (max-width: 480px) {
@@ -54,6 +55,12 @@
 
 @mixin w320() {
   @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin w320min() {
+  @media screen and (min-width: 321px) {
     @content;
   }
 }
