@@ -37,7 +37,12 @@
   @media screen and (max-width: 640px) {
     @content;
   }
-  
+}
+
+@mixin big-phones-min() {
+  @media screen and (min-width: 641px) {
+    @content;
+  }
 }
 
 @mixin w530() {

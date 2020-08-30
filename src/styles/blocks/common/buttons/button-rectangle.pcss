@@ -7,15 +7,20 @@
   background-color: $gray;
   display: inline-block;
   transition: $speed;
+  outline: none;
 
   &:hover {
     box-shadow: 3px 3px 10px rgba(50, 50, 50, 0.25);
   }
   
   &_filter {
-    background-color: $blue;
+    background-color: $blue !important;
     color: $secondary;
     padding: 6% 29% 5%;
+
+    @include big-phones {
+      padding: 25px 10%;
+    }  
   }
 
   &:disabled {

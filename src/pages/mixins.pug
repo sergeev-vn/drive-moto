@@ -11,7 +11,7 @@ mixin favicon()
 
 mixin breadcrumbs(...arg)
   .breadcrumbs
-    .container
+    .container.breadcrumbs__container
       ul.breadcrumbs__list
         each val in [...arg]
           li.breadcrumbs__item

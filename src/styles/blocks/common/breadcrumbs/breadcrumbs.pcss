@@ -1,10 +1,23 @@
 .breadcrumbs {
   margin-top: 43px;
   margin-bottom: 40px;
+  white-space: nowrap;
+}
+
+.breadcrumbs__container {
+  @include desktop {
+    width: 100%;
+    margin-left: 2.5%;
+  }
+
+  @include phones {
+    margin-left: 5%;
+  }
 }
 
 .breadcrumbs__list {
   display: flex;
+  overflow: auto;
 }
 
 .breadcrumbs__item {

@@ -1,4 +1,14 @@
 .filter-tabs {
+
+  @include big-phones {
+    display: none;
+    padding-bottom: 30px;
+  }
+
+  @include big-phones-min {
+    display: block !important; 
+  }
+
   .tabs__tablist-item_active {
     .filter-tabs__tabs-link {
       color: $main;
@@ -7,8 +17,14 @@
     }
   }
 }
+
+.filter-tabs__tabs {
+  justify-content: center;
+}
+
 .filter-tabs__tabs-item {
   margin-right: 42px;
+  white-space: nowrap;
 
   &:last-child {
     margin-right: 0;

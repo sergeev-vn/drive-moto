@@ -9,3 +9,7 @@ $('.footer__top-title-drop').on('click', function() {
     $(this).toggleClass('footer__top-title_active');
   }
 })
+
+$('.catalog-section__inner-aside-button').on('click', function() {
+  $(this).next().slideToggle('fast');
+})

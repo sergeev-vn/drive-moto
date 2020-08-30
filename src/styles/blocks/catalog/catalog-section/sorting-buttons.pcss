@@ -1,5 +1,11 @@
 .sorting-buttons {
   display: flex;
+  overflow: auto;
+
+  @include phones {
+    min-width: 106%;
+  }
+
 }
 
 .sorting-buttons__item {
@@ -17,6 +23,7 @@
   opacity: 0.7;
   border-radius: 3px;
   transition: $speed;
+  white-space: nowrap;
 
   &:hover {
     opacity: 1;

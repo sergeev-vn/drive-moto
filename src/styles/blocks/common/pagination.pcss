@@ -10,6 +10,10 @@
 .pagination__item {
   margin-right: 15px;
 
+  @include phones {
+    margin-right: 7px;
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -30,6 +34,10 @@
   padding: 10px 16px;
   border: 2px solid transparent;
   transition: .1s;
+
+  @include phones {
+    padding: 7px 13px;
+  }
 
   &:hover {
     color: $blue;

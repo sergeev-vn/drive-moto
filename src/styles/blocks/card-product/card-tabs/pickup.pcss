@@ -2,6 +2,10 @@
   padding-top: 50px;
   padding-left: 38px;
   padding-bottom: 28px;
+
+  @include w1100 {
+    padding-left: 0;
+  }
 }
 
 .pickup-form__top {
@@ -9,10 +13,19 @@
   color: rgba($main, 0.6);
   font-size: 17px;
   margin-bottom: 50px;
+
+  @include w1100 {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .pickup-form__search-field {
   margin-right: 13%;
+
+  @include w1100 {
+    margin-right: 0;
+  }
 }
 
 .pickup-form__search-field-label {
@@ -26,10 +39,20 @@
 
 .pickup-form__search-radio-label-text {
   margin-left: 15px;
+  white-space: nowrap;
 }
 
 .pickup-form__search-radio-buttons {
   display: flex;
+
+  @include w920 {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  @include phones {
+    flex-wrap: wrap;
+  }
 }
 
 .pickup-form__search-radio-buttons-label {
@@ -40,6 +63,18 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @include w1100 {
+    margin-right: 34px;
+  }
+
+  @include phones {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -52,10 +87,18 @@
   display: table-header-group;
   font-size: 20px;
 
+  @include big-phones {
+    display: none;
+  }
+
   .pickup-form__table-cell {
     border: none;
     padding-bottom: 20px;
     padding-top: 0;
+
+    @include big-phones {
+      padding-bottom: 10px;
+    }
   }
 }
 
@@ -63,6 +106,19 @@
   display: table-row;
   color: rgba($main, 0.7);
   font-size: 16px;
+
+  @include big-phones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba($main, 0.1);
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    &:last-child {
+      border: none;
+    }
+  }
 }
 
 .pickup-form__table-cell {
@@ -71,20 +127,42 @@
   padding-bottom: 20px;
   padding-top:  20px;
 
+  @include big-phones {
+    border: none;
+    padding-bottom: 10px;
+    padding-top:  5px;
+  }
+
   &-address {
     padding-right: 7%;
+
+    @include w920 {
+      padding-right: 5%;
+    }
   }
 
   &-workhour {
     padding-right: 8.3%;
+
+    @include w920 {
+      padding-right: 4%;
+    }
   }
 
   &-available {
     padding-right: 9%;
+
+    @include w920 {
+      padding-right: 6%;
+    }
   }
 
   &-amount {
     padding-right: 5%;
+
+    @include w920 {
+      padding-right: 3%;
+    }
   }
 
   &-button {
@@ -99,5 +177,18 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include big-phones {
+    justify-content: flex-start;
+  }
+}
+
+.pickup-form__table-cell-text {
+  margin-right: 5px;
+  white-space: nowrap;
+
+  &:last-child {
+    margin-right: 0;
   }
 }

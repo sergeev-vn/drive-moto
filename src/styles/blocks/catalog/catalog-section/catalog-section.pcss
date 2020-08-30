@@ -5,15 +5,29 @@
 .catalog-section__sorting {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .catalog-section__inner {
   margin-top: 47px;
+
+  @include big-phones {
+    flex-wrap: wrap;
+  }
 }
 
 .catalog-section__sorting-item {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    width: 100%;
+    margin-bottom: 26px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .catalog-section__sorting-item-sorting-order {
@@ -32,8 +46,27 @@
   flex-basis: 25%;
   flex-shrink: 0;
   padding-right: 10px;
+
+  @include big-phones {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
 }
 
 .catalog-section__pagination {
   padding-top: 40px;
+}
+
+.catalog-section__inner-aside-button {
+  display: none;
+
+  @include big-phones {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+
+    button {
+      width: 100%;
+    }
+  }
 }

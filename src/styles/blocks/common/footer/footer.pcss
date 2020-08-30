@@ -80,13 +80,19 @@
 
     .footer__top-title {
       position: relative;
+
       &::after {
+        display: none;
         content: svg-load('../../images/icons/arrow-drop.svg', fill=$light-gray);
         position: absolute;
         top: 50%;
         right: 13px;
         transform: translateY(-50%) rotate(-180deg);
         transition: transform $speed;
+
+        @include w320 {
+          display: block;
+        }
       }
 
       &_active {
@@ -146,13 +152,14 @@
   transition: $speed;
 
   &:hover {
-    color: $blue;
+    opacity: 0.7;
   }
 }
 
 .footer__bottom-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer__bottom-item {
@@ -161,14 +168,26 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @include phones {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include w320 {
+    margin-right: 0;
+  }
 }
 
 .footer__bottom-link {
-  font-size: 10px;
+  font-size: 12px;
   color: #48494D;
   transition: $speed;
   
   &:hover {
-    color: $blue;
+    opacity: 0.7;
   }
 }

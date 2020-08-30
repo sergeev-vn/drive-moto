@@ -3,6 +3,13 @@
   padding: 22px 34px 24px;
   display: flex;
   justify-content: space-between;
+
+  @include w920 {
+    overflow: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    width: 102.6%;
+  }
 }
 
 .card-more-tabs__tabs-item {
@@ -10,6 +17,10 @@
   font-size: 20px;
   transition: $speed;
   
+  @include w920 {
+    margin-right: 30px;
+  }
+
   &::after {
     content: '';
     width: 100%;

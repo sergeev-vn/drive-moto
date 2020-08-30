@@ -34,7 +34,7 @@ $('.products-slider__list').each(function() {
         }
       },
       {
-        breakpoint: 506,
+        breakpoint: 530,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

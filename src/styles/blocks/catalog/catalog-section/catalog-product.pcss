@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
+  @include w1176 {
+    justify-content: space-around;
+  }
 
   &_list-active {
     .product-item {
@@ -20,6 +24,10 @@
   margin-bottom: 30px;
 
   &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
     margin-right: 0;
   }
 }
