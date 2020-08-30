@@ -3,7 +3,7 @@ $('.filter-dropdown__title').on('click', function() {
   $(this).next().slideToggle('fast');
 })
 
-$('.footer__top-title').on('click', function() {
+$('.footer__top-title-drop').on('click', function() {
   if (window.innerWidth <= '320') {
     $(this).next().slideToggle('fast');
     $(this).toggleClass('footer__top-title_active');
