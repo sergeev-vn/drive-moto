@@ -9,11 +9,11 @@
 + Webpack 4
 + jQuery
 
-<p align='center'>
-<img src='http://lessons.sergeev.press/tesla-preview.png'>
-</p>
+[**Главная страница**](https://sergeev-vn.github.io/drive-moto/)
 
-[**Демо**](https://sergeev-vn.github.io/drive-moto/)
+[**Каталог**](https://sergeev-vn.github.io/drive-moto/catalog)
+
+[**Карточка товара**](https://sergeev-vn.github.io/drive-moto/card-product)
 
 ## Чтобы развернуть проект необходимо:
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же
