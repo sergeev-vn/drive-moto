@@ -9,11 +9,13 @@
 + Webpack 4
 + jQuery
 
-[**Главная страница**](https://sergeev-vn.github.io/drive-moto/)
+Структура сайта:
 
-[**Каталог**](https://sergeev-vn.github.io/drive-moto/catalog)
++ [**Главная страница**](https://sergeev-vn.github.io/drive-moto/)
 
-[**Карточка товара**](https://sergeev-vn.github.io/drive-moto/card-product)
++ [**Каталог**](https://sergeev-vn.github.io/drive-moto/catalog)
+
++ [**Карточка товара**](https://sergeev-vn.github.io/drive-moto/card-product)
 
 ## Чтобы развернуть проект необходимо:
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же
