@@ -1,5 +1,9 @@
 .card-section {
   margin-bottom: 80px;
+
+  @include tablets {
+    margin-bottom: 60px;
+  }
 }
 
 .card-section__inner {
@@ -21,10 +25,11 @@
   margin-right: 2%;
   position: relative;
   min-height: 598px;
-  
+
   @include tablets {
     margin-right: 0;
     max-width: 100%;
+    padding-top: 44px;
   }
 
   &_sale {
@@ -101,6 +106,10 @@
 
 .card-section__title {
   margin-bottom: 10px;
+
+  @include tablets {
+    margin-bottom: 20px;
+  }
 }
 
 

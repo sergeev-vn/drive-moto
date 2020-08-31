@@ -8,6 +8,15 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  transition: $speed;
+  
+  &:hover {
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+    
+    .product-promo__title {
+      color: $blue;
+    }
+  }
 
   @include w920 {
     max-width: 400px;
@@ -80,6 +89,7 @@
 
 .product-promo__title {
   font-weight: bold;
+  transition: $speed;
 }
 
 .product-promo__footer {
