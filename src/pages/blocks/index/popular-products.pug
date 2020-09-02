@@ -33,7 +33,7 @@ section.popular-products
                 - ]
                 each product in popularProductList
                   li.products-slider__item
-                    a(href="#" class={'product-item_sale': product.sale === true, 'product-item_not-available': product.notAvailable === true}).product-item
+                    a(href="./card-product.html" class={'product-item_sale': product.sale === true, 'product-item_not-available': product.notAvailable === true}).product-item
                       .product-item__button.product-item__button_top
                         button(type="button").button-favorite
                           .button-favorite__icon
@@ -65,7 +65,7 @@ section.popular-products
                 - ]
                 each product2 in popularProductList2
                   li.products-slider__item
-                    a(href="#" class={'product-item_sale': product2.sale === true, 'product-item_not-available': product2.notAvailable === true}).product-item
+                    a(href="./card-product.html" class={'product-item_sale': product2.sale === true, 'product-item_not-available': product2.notAvailable === true}).product-item
                       .product-item__button.product-item__button_top
                         button(type="button").button-favorite
                           .button-favorite__icon
