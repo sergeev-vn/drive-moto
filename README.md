@@ -11,17 +11,17 @@
 
 Структура сайта:
 
-+ [**Главная страница: https://sergeev-vn.github.io/drive-moto/**](https://sergeev-vn.github.io/drive-moto/)
++ Главная страница: [**https://sergeev-vn.github.io/drive-moto/**](https://sergeev-vn.github.io/drive-moto/)
 <p align='center'>
 <img src='http://lessons.sergeev.press/drive-moto-main.png' width='100%'>
 </p>
 
-+ [**Каталог: https://sergeev-vn.github.io/drive-moto/catalog**](https://sergeev-vn.github.io/drive-moto/catalog)
++ Каталог: [**https://sergeev-vn.github.io/drive-moto/catalog**](https://sergeev-vn.github.io/drive-moto/catalog)
 <p align='center'>
 <img src='http://lessons.sergeev.press/drive-moto-catalog.png' width='100%'>
 </p>
 
-+ [**Карточка товара: https://sergeev-vn.github.io/drive-moto/card-product**](https://sergeev-vn.github.io/drive-moto/card-product)
++ Карточка товара: [**https://sergeev-vn.github.io/drive-moto/card-product**](https://sergeev-vn.github.io/drive-moto/card-product)
 <p align='center'>
 <img src='http://lessons.sergeev.press/drive-moto-card.png' width='100%'>
 </p>
