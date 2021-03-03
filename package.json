@@ -52,7 +52,7 @@
     "jquery-form-styler": "^2.0.2",
     "normalize.css": "^8.0.1",
     "numeral": "^2.0.6",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "slick-carousel": "^1.8.1"
   }
 }
